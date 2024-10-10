@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.08.1
+%define		kdeappsver	24.08.2
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kbruch
 Summary:	Kbruch
 Name:		ka6-%{kaname}
-Version:	24.08.1
+Version:	24.08.2
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	b048443cb8b7b759938104ce577e238a
+# Source0-md5:	dd1846309b740dd6910a9930c0d057ba
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -42,10 +42,10 @@ can use the learning mode to practice with fractions. The program
 checks the user's input and gives feedback.
 
 %description -l pl.UTF-8
-KBruch to mały program do ćwiczenia obliczeń na ułamkach i
-procentach. W tym celu program podaje różne ćwiczenia, dzięki
-którym możesz trenować operacje na ułamkach w trybie nauki. KBruch
-sprawdza odpowiedzi użytkownika i podaje informacje zwrotne.
+KBruch to mały program do ćwiczenia obliczeń na ułamkach i procentach.
+W tym celu program podaje różne ćwiczenia, dzięki którym możesz
+trenować operacje na ułamkach w trybie nauki. KBruch sprawdza
+odpowiedzi użytkownika i podaje informacje zwrotne.
 
 %prep
 %setup -q -n %{kaname}-%{version}
@@ -100,3 +100,4 @@ rm -rf $RPM_BUILD_ROOT
 %lang(uk) %{_mandir}/uk/man1/kbruch.1*
 %{_datadir}/metainfo/org.kde.kbruch.appdata.xml
 %lang(fr) %{_mandir}/fr/man1/kbruch.1*
+%lang(sl) %{_mandir}/sl/man1/kbruch.1*
